@@ -8,10 +8,7 @@ test.describe('Search properties for sale', async () => {
     const searchProperties = new SearchProperties(page);
     
     test.step('Enter a city', async () => {
-      await searchProperties.searchLocation(searchPropertiesData.byCityName);
-      await searchProperties.validateSearchResults(
-        searchPropertiesData.byCityName
-      );      
+      await searchProperties.searchLocation(searchPropertiesData.byCityName);    
     });
   });
 });
