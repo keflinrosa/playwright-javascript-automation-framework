@@ -1,0 +1,43 @@
+name: Run Playwright Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_requests:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Install Playwright Browsers
+      run: |
+        npx playwright install --with-deps
+
+    - name: Run Playwright Tests
+      run: |
+        npx playwright test
+
+    - name: Generate Allure Report
+      run: |
+        npx allure generate allure-results --clean -ol allure-report
+
+    - name: Upload Allure Report as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: allure-report
+        path: allure-report
