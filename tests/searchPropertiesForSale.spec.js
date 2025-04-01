@@ -1,5 +1,4 @@
 import { test } from './setup/fixtures'; 
-// import { test } from '@playwright/test';
 import { SearchProperties } from './pages/searchProperties';
 import { searchPropertiesData } from './data/searchData';
 
