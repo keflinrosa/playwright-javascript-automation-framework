@@ -3,10 +3,6 @@ import { searchPropertiesElements } from "../elements/searchPropertiesElements";
 
 export class SearchProperties extends BasePage {
 
-    async acceptCookies() {
-        await this.clickElement(searchPropertiesElements.acceptCookies);
-    }
-
     async searchLocation(location) {
         await this.fillInput(searchPropertiesElements.searchInput, location);
         await this.page.locator(searchPropertiesElements.searchResult).filter({ hasText: new RegExp(`^${location}$`) }).click();
