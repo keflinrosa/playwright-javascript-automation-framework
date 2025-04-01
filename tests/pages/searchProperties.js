@@ -1,4 +1,4 @@
-import { BasePage } from "./BasePage";
+import { BasePage } from "./TestPage";
 import { searchPropertiesElements } from "../elements/searchPropertiesElements";
 
 export class SearchProperties extends BasePage {
