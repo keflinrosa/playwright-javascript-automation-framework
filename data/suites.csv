@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","8173","Search by City Name","chromium","Fri Apr 11 11:14:53 UTC 2025","passed","Fri Apr 11 11:15:02 UTC 2025","Search properties for sale","searchPropertiesForSale.spec.js","",""
